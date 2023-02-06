@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans&display=swap');
+
+*{
+  z-index: 4;
+}
+
+/* H1 = ICON */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Abril Fatface', cursive;
+  text-transform: uppercase;
+}
+/* body */
+body {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+  overflow:hidden;
+
+  background-color: #191d26;
+}
+/* header aka NAV BAR */
+header {
+  padding: 15px 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #191d26;
+  position: sticky;
+  color: white;
+}
+h1 {
+  letter-spacing: 0.5em;
+  color: darkgray;
+}
+.buttons{
+  display: flex;
+  width: 300px;
+  justify-content: flex-end;
+  gap: 20px;
+  align-items: center;
+}
+.signin, .signup, .demo {
+  cursor: pointer;
+}
+.demo{
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .signin:hover, .signup:hover, .demo:hover {
+  color: #b39856;
+}
+/* sign up button */
+.signup {
+  border: 2px solid #b39856;
+  background-color: #b39856;
+  border-radius: 10px;
+  padding: 3px 10px;
+  margin-left: 10px;
+  transition: all 0.2s linear;
+}
+.signup:hover {
+  border: 2px solid #b39856;
+  background-color: #191d26;
+  color: #b39856;
+}
+
+.img-div{
+  z-index: 2;
+  display: flex;
+  justify-content:left;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  align-items: center;
+
+
+  background-image: url('/images/vinyl-records.png');
+  background-position: center;
+  background-size:cover;
+  height: 35vh;
+}
+
+footer {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0; left: 10;
+  width: 100vw;
+  padding: 10px 15%;
+  color: darkgray;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer a {
+  text-decoration: none;
+  color: darkgray;
+  padding: 0 10px;
+}
+footer a:hover {color:#b39856}
+
+/* SIGN IN  & SIGN UP container*/
+.sign-in-container, .sign-up-container{
+  overflow: wrap;
+  display: none;
+  z-index: 5;
+  margin: 0 auto;
+  position: absolute;
+  width: 488px;
+  height: 547px;
+  background: #191d26;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  color: white;
+}
+/* This content keeps the modals centered */
+.sign-in-content, .sign-up-content{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: static;
+    z-index: 3;
+}
+.show{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* login form */
+.login-form, .signup-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #292d36;
+}
+.userName-input, .password-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.login-form input, .signup-form input{
+    margin-left: 10px;
+    margin-top: 10px;
+
+    background-color: #191d26;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+
+#sign-up-close, #sign-in-close {
+  background-color: #661b1c;
+  border: 2px solid #661b1c;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0 0 0;
+
+  color: white;
+  cursor: pointer;
+  width: 400px;
+}
+#sign-up-close:hover, #sign-in-close:hover {
+  background-color: transparent;
+  color: #b39856;
+}
+
+/* styling for error messages */
+.alert{
+    background-color: rgba(255,0,0, 0.2);
+    border: 1px inset rgba(255,0,0, 0.4);
+    border-radius: 5px;
+    padding: 10px;
+    width: 80%;
+
+    align-self: center;
+}
+.sign-in-instructions, .sign-up-instructions{
+  display: flex;
+  justify-content: center;
+}
+
+/* demo user styling*/
+/* ??? */
+.trends > h2 {
+  text-align: center;
+  padding: 20px 0;
+  color: darkgray;
+}
+.trendContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.trendCards {
+  display: grid;
+  grid-template-columns: 5vw 18vw;
+
+  box-sizing: border-box;
+  overflow: clip;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 25vw;
+
+  background: #191d26;
+  border: 2px solid #b39856;
+  color: #b39856;
+
+  transition: all 0.1s linear;
+}
+.trendCards:hover {
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  color: #191d26;
+  cursor: pointer;
+}
+.rank {
+  display: flex;
+  /* border-right: 1px solid #ffffff; */
+  background-color: #292d36;
+  align-items: center;
+  justify-content: center;
+  color: #b39856;
+}
+.cardContent {
+  padding: 10px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: clip;
+  text-overflow: ellipsis;
+}
+.cardContent p{
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: clip;
+  text-overflow:ellipsis;
+}
+
+
+
+/* styling for info-user */
+.info-user{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: rgba(0,0,0,0.75);
+  margin-left: 19%;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+}
+
+.info-user h2{
+  font-family: 'Abril Fatface', cursive;
+  font-weight: lighter;
+}
+.info-user p{
+  font-family: 'Noto Sans', sans-serif;
+}
+.modal-close-X {
+  cursor: pointer;
+  color: #661b1c;
+  align-self: flex-end;
+  margin-right: 10%;
+  margin-top: -10%;
+}

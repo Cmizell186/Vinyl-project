@@ -1,0 +1,59 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: fixed;
+  left:0; top:0;
+  width: 35px;
+  height: 100vh;
+
+  border-right: 15px solid #b39856;
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-bar{
+    background-color: #191d26;
+    justify-content: space-between;
+    width: 150px;
+    padding: -10px 0;
+    box-sizing: border-box;
+}
+/* location and spacing of buttons */
+.home-create-buttons, .user-logout-buttons, .vinyl-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-logout-buttons {
+  margin-bottom: 10px;
+}
+
+.home-create-buttons i, .user-logout-buttons i {
+  margin: 5px;
+}
+
+/* styling of each button */
+.nav-bar a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.nav-bar a:hover {
+  text-decoration: none;
+  color: #b39856;
+}
+
+/* styling and location of logo */
+.icon{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px;
+}
+.nav-favi{
+    width: 3rem;
+    align-self: center;
+    padding-top: 20px;
+}
